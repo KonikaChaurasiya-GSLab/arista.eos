@@ -226,6 +226,9 @@ def main():
     retries = module.params["retries"]
     interval = module.params["interval"]
     match = module.params["match"]
+    version = module.params["version"]
+    for command in commands:
+        command["version"] = version
 
     while retries > 0:
         responses = run_commands(module, commands)
