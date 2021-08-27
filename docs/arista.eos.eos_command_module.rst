@@ -426,7 +426,12 @@ Examples
         provider:
           transport: eapi
 
-
+    - name: Supoort for 'Version' parameter for httpapi and network_cli connections
+      arista.eos.eos_command:
+        commands:
+          - command: "show ip route summary"
+            output: json
+        version: 1
 
 Return Values
 -------------
